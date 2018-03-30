@@ -13,6 +13,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {BarcodeScanner} from "@ionic-native/barcode-scanner";
 
 
+
 @NgModule({
     declarations: [
         MyApp,

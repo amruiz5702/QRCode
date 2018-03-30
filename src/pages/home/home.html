@@ -12,9 +12,16 @@
     <div>
         <button ion-button block (click)="scan()">Scan</button>
     </div>
-    <div *ngIf="scannedData.text">
+    <div *ngIf="str">
         <label>Your scan data is:</label>
         <br>
-        <span>{{scannedData}}</span>
     </div>
+    <iframe *ngIf="video.url" width="100%"
+            height="315"
+            [src]="trustedVideoUrl ? trustedVideoUrl : null"
+            (load)="trustedVideoUrl ? handleIFrameLoadEvent() : null"
+            frameborder="0"
+            allowfullscreen></iframe>
+
+    <h2>{{ video?.title }}</h2>
 </ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar text-wrap>
+        <ion-title >Escanear Recurso</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+        <p style="text-align:center">Seleccione el tipo de recurso que desea escanear</p>
+    <ion-grid>
+        <ion-row>
+            <ion-col style="text-align:center; cursor:pointer">
+                <div class="card" (click)="resourceToScan('Image')">
+                    <img width="135" height="135" src="assets/imgs/png.png">
+                    <br><h4>Imagen</h4> 
+                </div>
+            </ion-col>
+            <ion-col style="text-align:center; cursor:pointer">
+                <div class="card" (click)="resourceToScan('Youtube Video')">
+                    <img width="135" height="135" src="assets/imgs/youtube.png">
+                    <br><h4>Video de Youtube</h4> 
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row >
+            <ion-col style="text-align:center; cursor:pointer">
+                <div class="card" (click)="resourceToScan('3D Animation')">
+                    <img width="135" height="135" src="assets/imgs/3d.png">
+                    <br><h4>Animación 3D</h4> 
+                </div>
+            </ion-col>
+            <ion-col style="text-align:center; cursor:pointer">
+                <div class="card" (click)="resourceToScan('Other Video')">
+                    <img width="135" height="135" src="assets/imgs/video.png">
+                    <br><h4>Otros Videos</h4> 
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

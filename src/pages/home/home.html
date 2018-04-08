@@ -7,21 +7,23 @@
 <ion-content padding>
     <div>
         <ion-input type="text" style="background: gray" [(ngModel)]="encodeText"></ion-input>
-        <button ion-button block (click)="encode()">Encode</button>
+        <button class="button" ion-button block (click)="encode()">Encode</button>
     </div>
     <div>
-        <button ion-button block (click)="scan()">Scan</button>
+        <button ion-button block (click)="goToOptions()">Scan</button>
     </div>
     <div *ngIf="str">
         <label>Your scan data is:</label>
         <br>
     </div>
-    <iframe *ngIf="video.url" width="100%"
-            height="315"
-            [src]="trustedVideoUrl ? trustedVideoUrl : null"
-            (load)="trustedVideoUrl ? handleIFrameLoadEvent() : null"
-            frameborder="0"
-            allowfullscreen></iframe>
+    <div *ngIf="resourceType == 'Youtube Video'">
+        <iframe width="100%" height="315" [src]="trustedVideoUrl ? trustedVideoUrl : null" (load)="trustedVideoUrl ? handleIFrameLoadEvent() : null"
+            frameborder="0" allowfullscreen></iframe>
+        <h2>{{ video?.title }}</h2>
+    </div>
 
-    <h2>{{ video?.title }}</h2>
+    <div aligment-items-center *ngIf="resourceType == 'Image' || resourceType == '3D Animation'">
+        <img [src]="imageSrc">
+    </div>
+    
 </ion-content>

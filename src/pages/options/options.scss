@@ -1,0 +1,29 @@
+page-discards {
+.center {
+    text-align: center !important;
+  }
+
+  div.fields {
+    margin: 6px auto 6px auto;
+    width: 240px;
+  }
+
+  div.conditions {
+    margin: 6px auto 24px auto;
+    width: 240px;
+    text-align: center;
+    color: #757576;
+  }
+
+  div.buttons {
+    text-align: center;
+    margin: 12px auto;
+  }
+
+  .invalid { border-bottom: 1px solid #f44336; }
+
+  .error-message .item-inner { border-bottom: 0 !important; }
+
+ 
+
+}
